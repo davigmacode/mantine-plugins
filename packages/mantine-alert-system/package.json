@@ -1,0 +1,38 @@
+{
+  "name": "mantine-alert-system",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node build.js && tsc --emitDeclarationOnly"
+  },
+  "devDependencies": {
+    "@mantine/core": "^6.0.17",
+    "@mantine/hooks": "^6.0.17",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-transition-group": "^4.4.6",
+    "eslint": "^8.46.0",
+    "mantine-plugins-config": "*",
+    "react": "^18.2.0",
+    "type-fest": "^4.1.0",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "@mantine/core": ">=6",
+    "@mantine/hooks": ">=6",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "^2.30.0",
+    "react-transition-group": "^4.4.5"
+  }
+}
