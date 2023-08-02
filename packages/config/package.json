@@ -1,0 +1,26 @@
+{
+  "name": "config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./esbuild": {
+      "import": "./esbuild/index.js"
+    },
+    "./eslint/*.cjs": {
+      "require": "./eslint/*.cjs"
+    },
+    "./typescript/*.json": "./typescript/*.json"
+  },
+  "scripts": {
+    "build": "turbo build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.18.17",
+    "eslint-config-next": "^13.4.12",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-config-turbo": "^1.10.12",
+    "eslint-plugin-react": "^7.33.1",
+    "fast-glob": "^3.3.1"
+  }
+}
