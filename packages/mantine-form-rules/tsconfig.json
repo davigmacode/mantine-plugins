@@ -1,0 +1,9 @@
+{
+  "extends": "config/typescript/tsconfig.react.json",
+  "include": ["."],
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist/"
+  }
+}

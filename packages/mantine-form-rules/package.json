@@ -1,0 +1,33 @@
+{
+  "name": "mantine-form-rules",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node build.js && tsc --emitDeclarationOnly"
+  },
+  "devDependencies": {
+    "@mantine/form": "^6.0.17",
+    "@mantine/hooks": "^6.0.17",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "eslint": "^8.46.0",
+    "eslint-config-custom": "*",
+    "react": "^18.2.0",
+    "config": "*",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "@mantine/core": ">=6",
+    "@mantine/hooks": ">=6",
+    "react": ">=18"
+  }
+}
