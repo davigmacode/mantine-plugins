@@ -1,5 +1,5 @@
 {
-  "extends": "tsconfig/nextjs.json",
+  "extends": "mantine-plugins-config/typescript/tsconfig.nextjs.json",
   "compilerOptions": {
     "plugins": [{ "name": "next" }]
   },

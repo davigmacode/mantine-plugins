@@ -9,7 +9,7 @@
   "devDependencies": {
     "@turbo/gen": "^1.10.12",
     "eslint": "^8.46.0",
-    "eslint-config-custom": "*",
+    "mantine-plugins-config": "*",
     "prettier": "^3.0.0",
     "turbo": "latest"
   },

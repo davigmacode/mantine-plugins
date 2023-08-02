@@ -1,0 +1,1 @@
+# `mantine-plugins-config`
