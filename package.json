@@ -1,19 +1,24 @@
 {
+  "name": "mantine-plugins",
+  "description": "Plugin collection of mantine",
+  "repository": "https://github.com/davigmacode/mantine-plugins.git",
+  "author": "Irfan Vigma Taufik <davigmacode@gmail.com>",
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "publish": "turbo run build --ignore=\"apps/**/*\" && changeset version && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@turbo/gen": "^1.10.12",
     "eslint": "^8.46.0",
     "mantine-plugins-config": "*",
     "prettier": "^3.0.0",
     "turbo": "latest"
   },
-  "name": "mantine-plugins",
   "packageManager": "npm@9.6.2",
   "workspaces": [
     "apps/*",

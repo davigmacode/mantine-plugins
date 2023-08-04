@@ -1,10 +1,17 @@
 {
   "name": "mantine-form-rules",
-  "version": "0.0.1",
+  "description": "Rules collection to work with @mantine/form",
+  "author": "Irfan Vigma Taufik <davigmacode@gmail.com>",
+  "version": "1.0.0",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/davigmacode/mantine-plugins.git",
+    "type": "git",
+    "directory": "packages/mantine-form-rules"
+  },
   "files": [
     "dist",
     "README.md",

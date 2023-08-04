@@ -120,7 +120,7 @@ const StackedAlert = () => {
   );
 };
 
-export default function () {
+export default function Page() {
   return (
     <Box p="lg">
       <SwitchedAlert />

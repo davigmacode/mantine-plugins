@@ -1,10 +1,17 @@
 {
   "name": "mantine-alert-system",
-  "version": "0.0.1",
+  "description": "Alert system based on Mantine components",
+  "author": "Irfan Vigma Taufik <davigmacode@gmail.com>",
+  "version": "1.0.0",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/davigmacode/mantine-plugins.git",
+    "type": "git",
+    "directory": "packages/mantine-alert-system"
+  },
   "files": [
     "dist",
     "README.md",
