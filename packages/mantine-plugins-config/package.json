@@ -12,9 +12,6 @@
     },
     "./typescript/*.json": "./typescript/*.json"
   },
-  "scripts": {
-    "build": "turbo build"
-  },
   "devDependencies": {
     "esbuild": "^0.18.17",
     "eslint-config-next": "^13.4.12",
