@@ -10,7 +10,6 @@ export default function Page() {
       currentPassword: '',
       newPassword: '',
       newPasswordConfirm: '',
-      logout: false,
     },
     validate: {
       currentPassword: rules.isRequired(),
