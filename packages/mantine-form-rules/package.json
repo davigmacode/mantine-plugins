@@ -25,7 +25,6 @@
   },
   "peerDependencies": {
     "@mantine/form": ">=6",
-    "@mantine/hooks": ">=6",
     "react": ">=18"
   }
 }
