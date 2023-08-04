@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { randomId } from '@mantine/hooks';
-import { AlertData, AlertSwitchActions, AlertTransition } from './types';
+import { AlertData, AlertSwitchActions, AlertTransitionProps } from './types';
 import { AlertSwitch } from './AlertSwitch';
 
-export interface UseAlertSwitchProps extends AlertTransition {
+export interface UseAlertSwitchProps extends AlertTransitionProps {
   switchMode?: 'in-out' | 'out-in';
 }
 
@@ -11,7 +11,7 @@ export type UseAlertSwitch = (props: UseAlertSwitchProps) => [React.ReactNode, A
 
 export const useAlertSwitch: UseAlertSwitch = ({
   switchMode,
-  transitionMode,
+  transition,
   transitionDuration,
 }) => {
   const [alert, setAlert] = useState<AlertData | null>(null);
@@ -31,7 +31,7 @@ export const useAlertSwitch: UseAlertSwitch = ({
       data={alert}
       onHide={hide}
       switchMode={switchMode}
-      transitionMode={transitionMode}
+      transition={transition}
       transitionDuration={transitionDuration}
     />
   );

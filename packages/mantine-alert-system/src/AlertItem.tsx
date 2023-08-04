@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react';
 import { Alert } from '@mantine/core';
-import { AlertData, AlertTransition, TransitionStatus } from './types';
+import { AlertData, AlertTransitionProps, TransitionStatus } from './types';
 import { useStyles } from './AlertItem.styles';
 
-export interface AlertItemProps extends AlertData, AlertTransition {
+export interface AlertItemProps extends AlertData, AlertTransitionProps {
   onHide(): void;
   nodeRef: React.ForwardedRef<HTMLDivElement>;
   transitionStatus: TransitionStatus;
@@ -21,13 +21,13 @@ export const AlertItem: React.FC<AlertItemProps> = ({
   onHide,
   onOpen,
   onClose,
-  transitionMode,
+  transition,
   transitionDuration,
   transitionStatus,
   ...props
 }) => {
   // console.log(`${id} on ${transitionStatus}`);
-  const { classes } = useStyles({ transitionMode, transitionDuration, transitionStatus, inline });
+  const { classes } = useStyles({ transition, transitionDuration, transitionStatus, inline });
   const hideTimeout = useRef<ReturnType<typeof setTimeout>>();
   const handleHide = () => {
     onHide();

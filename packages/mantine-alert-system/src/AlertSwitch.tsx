@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 import { Transition, SwitchTransition } from 'react-transition-group';
-import { AlertData, AlertTransition } from './types';
+import { AlertData, AlertTransitionProps } from './types';
 import { AlertItem } from './AlertItem';
 
-export interface AlertSwitchProps extends AlertTransition {
+export interface AlertSwitchProps extends AlertTransitionProps {
   switchMode?: 'in-out' | 'out-in';
   data: AlertData | null;
   onHide: () => void;
@@ -13,7 +13,7 @@ export const AlertSwitch: React.FC<AlertSwitchProps> = ({
   data,
   onHide,
   switchMode,
-  transitionMode,
+  transition,
   transitionDuration = 300,
 }) => {
   const id = data?.id || 'empty';
@@ -37,7 +37,7 @@ export const AlertSwitch: React.FC<AlertSwitchProps> = ({
               nodeRef={(node) => {
                 refs.current[id] = node;
               }}
-              transitionMode={transitionMode}
+              transition={transition}
               transitionDuration={transitionDuration}
               transitionStatus={transitionStatus}
             />

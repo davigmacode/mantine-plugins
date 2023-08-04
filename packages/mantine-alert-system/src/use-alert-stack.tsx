@@ -1,8 +1,8 @@
 import { UseAlertStackStateProps, useAlertStackState } from './use-alert-stack-state';
-import { AlertStackActions, AlertSpacing, AlertTransition } from './types';
+import { AlertStackActions, AlertSpacing, AlertTransitionProps } from './types';
 import { AlertStack } from './AlertStack';
 
-export interface UseAlertStackProps extends UseAlertStackStateProps, AlertTransition {
+export interface UseAlertStackProps extends UseAlertStackStateProps, AlertTransitionProps {
   spacing?: AlertSpacing;
 }
 
@@ -13,7 +13,7 @@ export type UseAlertStack = (
 export const useAlertStack: UseAlertStack = ({
   limit,
   spacing,
-  transitionMode,
+  transition,
   transitionDuration,
   initialValues,
 }) => {
@@ -23,7 +23,7 @@ export const useAlertStack: UseAlertStack = ({
     <AlertStack
       state={state}
       actions={actions}
-      transitionMode={transitionMode}
+      transition={transition}
       transitionDuration={transitionDuration}
       spacing={spacing}
     />

@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 import { Transition, TransitionGroup } from 'react-transition-group';
-import { AlertStackActions, AlertData, AlertTransition, AlertSpacing } from './types';
+import { AlertStackActions, AlertData, AlertTransitionProps, AlertSpacing } from './types';
 import { AlertItem } from './AlertItem';
 
-export interface AlertStackProps extends AlertTransition {
+export interface AlertStackProps extends AlertTransitionProps {
   state: AlertData[];
   actions: AlertStackActions;
   spacing?: AlertSpacing;
@@ -13,7 +13,7 @@ export const AlertStack: React.FC<AlertStackProps> = ({
   state,
   actions,
   spacing = 'xs',
-  transitionMode,
+  transition,
   transitionDuration = 300,
 }) => {
   const refs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -33,7 +33,7 @@ export const AlertStack: React.FC<AlertStackProps> = ({
               nodeRef={(node) => {
                 refs.current[data.id] = node;
               }}
-              transitionMode={transitionMode}
+              transition={transition}
               transitionDuration={transitionDuration}
               transitionStatus={transitionStatus}
               my={spacing}

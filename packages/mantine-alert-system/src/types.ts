@@ -1,5 +1,6 @@
 import type { SetOptional } from 'type-fest';
-import type { AlertProps, SystemProp, SpacingValue } from '@mantine/core';
+import type { AlertProps, SystemProp, SpacingValue, CSSObject } from '@mantine/core';
+import type { TransitionStatus } from 'react-transition-group';
 
 export type { TransitionStatus } from 'react-transition-group';
 
@@ -37,9 +38,11 @@ export interface AlertSwitchActions {
   hide: () => void;
 }
 
-export interface AlertTransition {
-  transitionMode?: TransitionMode;
+export type TransitionFn = (status: TransitionStatus) => CSSObject;
+
+export interface AlertTransitionProps {
   transitionDuration?: number;
+  transition?: TransitionFn;
 }
 
 export type AlertSpacing = SystemProp<SpacingValue>;
