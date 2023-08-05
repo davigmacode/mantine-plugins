@@ -4,9 +4,23 @@
   "author": "Irfan Vigma Taufik <davigmacode@gmail.com>",
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./severity": {
+      "require": "./dist/severity.cjs",
+      "import": "./dist/severity.mjs",
+      "types": "./dist/severity.d.ts"
+    },
+    "./transitions": {
+      "require": "./dist/transitions.cjs",
+      "import": "./dist/transitions.mjs",
+      "types": "./dist/transitions.d.ts"
+    }
+  },
   "repository": {
     "url": "https://github.com/davigmacode/mantine-plugins.git",
     "type": "git",
@@ -35,7 +49,6 @@
   "peerDependencies": {
     "@mantine/core": ">=6",
     "@mantine/hooks": ">=6",
-    "@tabler/icons-react": ">=2",
     "react": ">=18",
     "react-dom": ">=18"
   },

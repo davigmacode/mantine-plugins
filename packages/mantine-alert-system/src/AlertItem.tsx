@@ -1,7 +1,8 @@
 import { useRef, useEffect } from 'react';
 import { Alert } from '@mantine/core';
-import { AlertData, AlertTransitionProps, TransitionStatus } from './types';
 import { useStyles } from './AlertItem.styles';
+import type { AlertData, AlertTransitionProps } from './types';
+import type { TransitionStatus } from "./transitions";
 
 export interface AlertItemProps extends AlertData, AlertTransitionProps {
   onHide(): void;
@@ -55,11 +56,13 @@ export const AlertItem: React.FC<AlertItemProps> = ({
         ...props,
       });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     handleDelayedHide();
     return cancelDelayedHide;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [closeTimeout]);
 
   return (

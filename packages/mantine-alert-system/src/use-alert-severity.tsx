@@ -1,6 +1,13 @@
 import { IconCheck, IconInfoCircle, IconAlertTriangle, IconX } from '@tabler/icons-react';
 import { AlertShow } from './types';
 
+export interface AlertShowSeverities {
+  success: AlertShow;
+  info: AlertShow;
+  warning: AlertShow;
+  error: AlertShow;
+}
+
 interface AlertSeverityOptions {
   iconSize?: string | number;
 }

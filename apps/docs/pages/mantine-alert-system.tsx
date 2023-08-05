@@ -1,15 +1,22 @@
 import { Button, Box, Group, Card, ActionIcon, Text } from "@mantine/core";
 import { IconCode } from "@tabler/icons-react";
+import { useAlertSwitch, useAlertStack } from "mantine-alert-system";
 import {
-  useAlertSwitch,
-  useAlertStack,
   useAlertSeverity,
   AlertShowSeverities,
+} from "mantine-alert-system/severity";
+import {
   RAISE_TRANSITION,
   FALL_TRANSITION,
-} from "mantine-alert-system";
+} from "mantine-alert-system/transitions";
 
-const TriggerAlert = ({ showAlert, cleanAlert }: { showAlert: AlertShowSeverities, cleanAlert: () => void }) => {
+const TriggerAlert = ({
+  showAlert,
+  cleanAlert,
+}: {
+  showAlert: AlertShowSeverities;
+  cleanAlert: () => void;
+}) => {
   return (
     <Group>
       <Button
@@ -60,11 +67,7 @@ const TriggerAlert = ({ showAlert, cleanAlert }: { showAlert: AlertShowSeveritie
       >
         Show Error
       </Button>
-      <Button
-        size="xs"
-        color="gray"
-        onClick={cleanAlert}
-      >
+      <Button size="xs" color="gray" onClick={cleanAlert}>
         Clean Alert
       </Button>
     </Group>

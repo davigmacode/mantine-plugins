@@ -7,13 +7,13 @@ export interface UseAlertSwitchProps extends AlertTransitionProps {
   switchMode?: 'in-out' | 'out-in';
 }
 
-export type UseAlertSwitch = (props: UseAlertSwitchProps) => [React.ReactNode, AlertSwitchActions];
+export type UseAlertSwitch = (props?: UseAlertSwitchProps) => [React.ReactNode, AlertSwitchActions];
 
 export const useAlertSwitch: UseAlertSwitch = ({
   switchMode,
   transition,
   transitionDuration,
-}) => {
+} = {}) => {
   const [alert, setAlert] = useState<AlertData | null>(null);
 
   const show: AlertSwitchActions['show'] = (data) => {

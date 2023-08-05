@@ -7,7 +7,7 @@ export interface UseAlertStackProps extends UseAlertStackStateProps, AlertTransi
 }
 
 export type UseAlertStack = (
-  props: UseAlertStackProps
+  props?: UseAlertStackProps
 ) => [content: React.ReactNode, actions: AlertStackActions];
 
 export const useAlertStack: UseAlertStack = ({
@@ -16,7 +16,7 @@ export const useAlertStack: UseAlertStack = ({
   transition,
   transitionDuration,
   initialValues,
-}) => {
+} = {}) => {
   const [{ state }, actions] = useAlertStackState({ limit, initialValues });
 
   const content = (

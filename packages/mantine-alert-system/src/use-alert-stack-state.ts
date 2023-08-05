@@ -12,10 +12,10 @@ export interface UseAlertStackStateProps {
 }
 
 export type UseAlertStackState = (
-  props: UseAlertStackStateProps
+  props?: UseAlertStackStateProps
 ) => [value: AlertStackStateValue, actions: AlertStackActions];
 
-export const useAlertStackState: UseAlertStackState = ({ limit = 3, initialValues = [] }) => {
+export const useAlertStackState: UseAlertStackState = ({ limit = 3, initialValues = [] } = {}) => {
   const {
     state,
     queue,

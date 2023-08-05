@@ -1,5 +1,6 @@
 import { createStyles } from "@mantine/core";
-import { AlertTransitionProps, TransitionStatus, TransitionFn } from "./types";
+import type { AlertTransitionProps } from "./types";
+import type { TransitionStatus, TransitionFn } from "./transitions";
 
 const FALLBACK_TRANSITION: TransitionFn = () => ({});
 
