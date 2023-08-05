@@ -2,7 +2,7 @@
   "name": "mantine-form-rules",
   "description": "Rules collection to work with @mantine/form",
   "author": "Irfan Vigma Taufik <davigmacode@gmail.com>",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -16,6 +16,19 @@
     "dist",
     "README.md",
     "LICENSE"
+  ],
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "ui",
+    "components",
+    "ui-kit",
+    "library",
+    "frontend",
+    "form",
+    "form-rules",
+    "form-validation"
   ],
   "scripts": {
     "build": "node build.js && tsc --emitDeclarationOnly"
