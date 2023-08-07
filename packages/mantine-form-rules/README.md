@@ -17,7 +17,7 @@ yarn add mantine-form-rules @mantine/form
 npm install mantine-form-rules @mantine/form
 ```
 
-## Usage
+## Quick Usage
 ```ts
 import { PasswordInput, Box, Button } from '@mantine/core';
 import { useForm } from '@mantine/form';
@@ -39,7 +39,7 @@ export default function Page() {
         rules.hasUpperCase(),
         rules.hasNumber(),
         rules.minLength(6),
-      ], { accumulate: true }),
+      ], { accumulate: true }), // return every or first occurred error
       newPasswordConfirm: rules([
         rules.isRequired(),
         rules.matchesField('newPassword', 'Passwords are not the same'),
@@ -72,4 +72,36 @@ export default function Page() {
     </Box>
   );
 }
+```
+
+## Tree Shaking
+```ts
+import {
+  some, // combine rule and return the first occurred error
+  every, // combine rule and return every occurred error
+  isRequired,
+  hasUpperCase,
+  hasNumber,
+  minLength,
+  matchesField,
+} from 'mantine-form-rules';
+
+const form = useForm({
+  initialValues: {
+    password: '',
+    passwordConfirm: '',
+  },
+  validate: {
+    password: every([
+      isRequired(),
+      hasUpperCase(),
+      hasNumber(),
+      minLength(6),
+    ]),
+    passwordConfirm: some([
+      isRequired(),
+      matchesField('newPassword', 'Passwords are not the same'),
+    ]),
+  },
+});
 ```

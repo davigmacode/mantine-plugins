@@ -1,5 +1,12 @@
 # mantine-alert-system
 
+## 2.0.1
+
+### Patch Changes
+
+- Added info to package.json that all the code does not contain side effects
+- Added main entry with 'main', 'module', 'types'
+
 ## 2.0.0
 
 ### Major Changes
