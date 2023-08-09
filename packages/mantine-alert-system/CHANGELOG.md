@@ -1,5 +1,11 @@
 # mantine-alert-system
 
+## 3.0.0
+
+### Major Changes
+
+- Revert to single entry
+
 ## 2.0.1
 
 ### Patch Changes

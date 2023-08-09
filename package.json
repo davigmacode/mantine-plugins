@@ -9,6 +9,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changelog": "changeset",
     "publish": "turbo run build --ignore=\"apps/**/*\" && changeset version && changeset publish"
   },
   "devDependencies": {

@@ -1,14 +1,13 @@
 import { Button, Box, Group, Card, ActionIcon, Text } from "@mantine/core";
 import { IconCode } from "@tabler/icons-react";
-import { useAlertSwitch, useAlertStack } from "mantine-alert-system";
 import {
+  useAlertSwitch,
+  useAlertStack,
   useAlertSeverity,
   AlertShowSeverities,
-} from "mantine-alert-system/severity";
-import {
   RAISE_TRANSITION,
   FALL_TRANSITION,
-} from "mantine-alert-system/transitions";
+} from "mantine-alert-system";
 
 const TriggerAlert = ({
   showAlert,

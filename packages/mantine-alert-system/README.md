@@ -77,8 +77,11 @@ Optionally use severity [`success`, `info`, `warning`, `error`] with no hassle
 
 ```ts
 import { Button } from "@mantine/core";
-import { useAlertSwitch, useAlertStack } from "mantine-alert-system";
-import { useAlertSeverity } from "mantine-alert-system/severity";
+import {
+  useAlertSwitch,
+  useAlertStack,
+  useAlertSeverity,
+} from "mantine-alert-system";
 
 const SwitchedAlertWithSeverity = () => {
   const [alert, { show, hide }] = useAlertSwitch();
@@ -130,9 +133,12 @@ const StackedAlertWithSeverity = () => {
 Use predefined transitions [`RAISE_TRANSITION`, `FALL_TRANSITION`, `SCALE_TRANSITION`] or create your own transition with custom function
 ```ts
 import { Button } from "@mantine/core";
-import { useAlertSwitch, useAlertStack } from "mantine-alert-system";
-import { useAlertSeverity } from "mantine-alert-system/severity";
-import { RAISE_TRANSITION } from "mantine-alert-system/transitions";
+import {
+  useAlertSwitch,
+  useAlertStack,
+  useAlertSeverity,
+  RAISE_TRANSITION,
+} from "mantine-alert-system";
 
 // use predefined transition
 const SwitchedAlertWithCustomTransition = () => {
