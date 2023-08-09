@@ -1,5 +1,11 @@
 # mantine-alert-system
 
+## 3.0.1
+
+### Patch Changes
+
+- Include tabler icon in bundle
+
 ## 3.0.0
 
 ### Major Changes
